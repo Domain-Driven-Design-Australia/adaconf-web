@@ -3,7 +3,7 @@ title: Analysis, Design & Architecture Conference
 type: about
 ---
 
-Welcome to ADAConf, an Australian one-day community conference for those interested in software analysis, design and architecture.  It is an off-shoot of the [Domain-Driven Design Australia meetup community](https://www.meetup.com/en-AU/domain-driven-design-australia/), and is dedicated to the mission of re-focussing software development conversations around building robust, resilient, adaptable and responsive software.
+Welcome to ADAConf, an Australian one-day community conference for those interested in software analysis, design and architecture.  It is an off-shoot of the <a href="https://www.meetup.com/en-AU/domain-driven-design-australia/" target="_blank">Domain-Driven Design Australia meetup community</a>, and is dedicated to the mission of re-focussing software development conversations around building robust, resilient, adaptable and responsive software.
 
 We are creating space for conversations about everything from specific technology problems and how they can be solved to abstract ideas at the intersection of technology and philosophy.
 

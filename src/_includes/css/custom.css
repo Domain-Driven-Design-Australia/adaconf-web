@@ -137,7 +137,15 @@ html {
     border-bottom-color: #ccc;
 }
 
-#about ul {
-  @apply list-disc;
-  @apply list-inside;
+#about-content {
+  ul {
+    @apply list-disc;
+    @apply list-inside;
+  }
+  a {
+    @apply text-purple-600;
+  }
+  a:hover {
+    @apply underline;
+  }
 }

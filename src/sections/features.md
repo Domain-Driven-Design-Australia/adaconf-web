@@ -1,7 +1,7 @@
 ---
-title: Most AWE.SOME Features
+title: Conference Topics
 afterTitle: ...and so much more!
 type: features
 ---
 
-Pellentesque ullamcorper fringilla odio at pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla mattis erat dui, ut tempor lectus dictum id.
+Just some of the ideas we'll be exploring at ADAConf:

@@ -1,32 +1,32 @@
 [
   {
-    "title": "AWE.SOME Feature One",
+    "title": "Modelling, analysis and software design practices",
     "icon": "icon1.svg",
-    "content": "Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt."
+    "content": ""
   },
   {
-    "title": "AWE.SOME Feature Two",
+    "title": "Deep dives into aspects of building good software",
     "icon": "icon2.svg",
-    "content": "Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt."
+    "content": ""
   },
   {
-    "title": "AWE.SOME Feature Three",
+    "title": "Bridging the gap between business and technology",
     "icon": "icon3.svg",
-    "content": "Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt."
+    "content": ""
   },
   {
-    "title": "AWE.SOME Feature Four",
+    "title": "Systems thinking & socio-technical architecture",
     "icon": "icon4.svg",
-    "content": "Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt."
+    "content": ""
   },
   {
-    "title": "AWE.SOME Feature Five",
+    "title": "Product design & visual collaboration",
     "icon": "icon5.svg",
-    "content": "Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt."
+    "content": ""
   },
   {
-    "title": "AWE.SOME Feature Six",
+    "title": "Case studies and experience reports",
     "icon": "icon6.svg",
-    "content": "Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt."
+    "content": ""
   }
 ]

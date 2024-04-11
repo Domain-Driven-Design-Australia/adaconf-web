@@ -136,3 +136,8 @@ html {
 .tippy-tooltip[x-placement^='bottom'] .tippy-arrow {
     border-bottom-color: #ccc;
 }
+
+#about ul {
+  @apply list-disc;
+  @apply list-inside;
+}

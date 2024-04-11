@@ -1,6 +1,20 @@
 ---
-title: AWE.SOME Heading
+title: Analysis, Design & Architecture Conference
 type: about
 ---
 
-Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt. Vivamus vitae erat vel tellus condimentum consectetur.
+Welcome to ADAConf, an Australian one-day community conference for those interested in software analysis, design and architecture.
+
+We are creating space for conversations about everything from specific technology problems and how they can be solved to abstract ideas at the intersection of technology and philosophy.
+
+Conversations like:
+
+* Modelling, analysis and software design practices
+* Deep dives into aspects of building good software
+* Bridging the gap between business and technology
+* Systems thinking & socio-technical architecture
+* Product design & visual collaboration
+* Case studies and experience reports
+* Failures and lessons learnt
+* Experiments and lessons learnt
+* Challenges to conventionally accepted ideas

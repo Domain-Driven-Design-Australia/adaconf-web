@@ -6,4 +6,4 @@ layout: page.njk
 
 The Analysis, Design & Architecture Conference (ADAConf) and this website (https://adaconf.org) are owned and operated by SPCS Productions Pty Ltd, ABN: 44 675 931 610.
 
-SPCS Productions Pty Ltd can be contacted via our [contact form](/contact).
+SPCS Productions Pty Ltd can be contacted via our [contact form](/contact/).

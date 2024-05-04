@@ -52,4 +52,4 @@ In some circumstances, the European Union General Data Protection Regulation (GD
 
 ##### 9. How to contact us about privacy
 
-If you have any queries, or if you seek access to your personal information, or if you have a complaint about our privacy practices, you can contact us through: ada.confau@gmail.com.
+If you have any queries, or if you seek access to your personal information, or if you have a complaint about our privacy practices, you can contact us via our [contact form](/contact/).

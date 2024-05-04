@@ -1,11 +1,13 @@
 const htmlmin = require("html-minifier");
 const markdownIt = require('markdown-it');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 
 const isPages = process.env.ELEVENTY_ENV === 'pages'
 const outDir = isPages ? 'docs' : 'public'
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(UpgradeHelper);
   // PLUGINS
   eleventyConfig.addPlugin(pluginRss);
 

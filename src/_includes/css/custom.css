@@ -137,7 +137,7 @@ html {
     border-bottom-color: #ccc;
 }
 
-#about-content {
+#about-content, .page-content {
   ul {
     @apply list-disc;
     @apply list-inside;

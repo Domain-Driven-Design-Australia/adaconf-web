@@ -1,6 +1,5 @@
 ---
 title: Conference Topics
-afterTitle: ...and so much more!
 type: features
 ---
 

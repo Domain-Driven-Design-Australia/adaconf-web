@@ -22,9 +22,11 @@
           </div>
         {% endfor %}
       </div>
-      <div class="self-center text-center w-full sm:w-1/3 px-4 sm:px-0">
-        <h3 class="font-bold tracking-widest text-blue-200 text-2xl my-6">{{ item.data.afterTitle }}</h3>
-      </div>
+      {% if item.data.afterTitle %}
+        <div class="self-center text-center w-full sm:w-1/3 px-4 sm:px-0">
+          <h3 class="font-bold tracking-widest text-blue-200 text-2xl my-6">{{ item.data.afterTitle }}</h3>
+        </div>
+      {% endif %}
       <div class="flex flex-row w-full justify-center pt-6">
         <a class="px-10 py-2 text-gray-200 bg-purple-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red" href="#register">Subscribe</a>
       </div>

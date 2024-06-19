@@ -6,26 +6,35 @@
         <div class="font-light text-gray-400 text-xl">
           {{ item.templateContent | safe }}
         </div>
-        <form netlify class="w-full max-w-lg my-20 mx-auto" action="#" method="post" id="registration-form" target="_blank" validate netlify-honeypot="bot-field" data-netlify-recaptcha="true">
-          <div class="hidden">
-            <label>
-              Don’t fill this out if you’re human: <input name="bot-field" />
-            </label>
-          </div>
-          <div class="flex items-center border-b border-purple-600 py-2">
-            <input class="appearance-none bg-transparent border border-transparent w-full text-gray-200 focus:outline-none focus:bg-gray-300 focus:text-gray-800 focus:border-gray-400 mr-3 py-2 px-3" type="email" value="" name="EMAIL" placeholder="analysis@goodsoftware.example" aria-label="Email Address" required>
-            <button class="flex-shrink-0 bg-purple-600 border-purple-600 hover:bg-gray-800 hover:text-purple-600 border text-gray-200 py-2 px-4" type="submit" name="subscribe">
-              Subscribe
-            </button>
-          </div>
-          <div class="mt-4" data-netlify-recaptcha="true"></div>
-          <label class="block text-gray-200 text-left px-2 mt-4" for="gdpr_37169">
-            <input class="leading-tight" type="checkbox" id="gdpr_37169" name="gdpr[37169]" value="Y" required>
-            <span class="text-md font-light">
-              I agree with the <a href="{{ env.baseUrl }}privacy" class="underline hover:no-underline hover:text-purple-600" title="Privacy Policy" target="_blank">Privacy Policy</a>
-            </span>
-          </label>
-        </form>
+        
+        <div id="mc_embed_shell">
+<div id="mc_embed_signup">
+    <form action="https://adaconf.us22.list-manage.com/subscribe/post?u=6aab5585c486c66f4ee88dd81&amp;id=c373dcb342&amp;f_id=00dfcfe1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <div id="mc_embed_signup_scroll">
+            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+            <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" placeholder="analysis@goodsoftware.example"></div>
+<div hidden=""><input type="hidden" name="tags" value="6478"></div>
+        <div id="mce-responses" class="clear foot">
+            <div class="response" id="mce-error-response" style="display: none;"></div>
+            <div class="response" id="mce-success-response" style="display: none;"></div>
+        </div>
+    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+        <input type="text" name="b_6aab5585c486c66f4ee88dd81_c373dcb342" tabindex="-1" value="">
+    </div>
+        <div class="optionalParent">
+            <div class="clear foot">
+                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                <p style="margin: 0px auto;"><a href="http://eepurl.com/iQIfrM" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-light.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+
+
+
       </div>
     </div>
   {% endif %}

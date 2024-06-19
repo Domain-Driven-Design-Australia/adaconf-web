@@ -149,3 +149,29 @@ html {
     @apply underline;
   }
 }
+
+/* mailchimp */
+#mc_embed_signup {
+  @apply bg-gray-800;
+  @apply text-gray-400;
+}
+
+#mc_embed_signup {
+  .button {
+    @apply flex-shrink-0 bg-purple-600 border-purple-600 hover:bg-gray-800 hover:text-purple-600 border text-gray-200 py-2 px-4;
+    height: inherit;
+    line-height: inherit;
+  }
+
+  input[type=email] {
+    @apply appearance-none bg-transparent border border-transparent w-full text-gray-200 focus:outline-none focus:bg-gray-300 focus:text-gray-800 focus:border-gray-400 mr-3 py-2 px-3;
+  }
+
+  .mc-field-group {
+    @apply border-b border-purple-600 py-2 my-2;
+  }
+
+  #mc-embedded-subscribe-form div.mce_inline_error {
+    margin-bottom:0px;
+  }
+}

@@ -9,16 +9,24 @@
       </div>
       <div class="self-center w-full xl:w-4/5 flex flex-col sm:flex-row flex-wrap px-4 xl:px:0">
         {% for item in speakers | selectattr("featured") %}
-          <div class="w-full sm:w-1/2 flex flex-row flex-no-wrap hover:shadow-lg hover:bg-blue-800 hover:bg-opacity-50 px-4 sm:px-8 py-6 sm:py-12">
-            <div class="w-full">
-              <img src="{{ env.baseUrl }}img/speakers/{{ item.img }}" alt="{{ item.name }}" class="w-2/3 block sm:mx-auto">
-            </div>
-            <div class="w-full">
-              <h3 class="tracking-wide text-blue-900 font-bold text-2xl uppercase mb-2">{{ item.name }}</h3>
-              <div class="font-light text-gray-200 text-lg">
-                {{ item.title }}
-              </div>
-            </div>
+          <div class="w-full sm:w-1/2 flex flex-col items-center hover:shadow-lg hover:bg-blue-800 hover:bg-opacity-50 px-4 sm:px-8 py-6 sm:py-12">
+            
+                <div class="w-1/2">
+                    <svg viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="spimg-{{ item.name | slug }}" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image xlink:href="{{ env.baseUrl }}img/speakers/{{ item.img }}" x="-32" y="0" width="150" height="100" />
+                            </pattern>
+                        </defs>
+                        <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#spimg-{{ item.name | slug }})"/>
+                    </svg>
+                </div>
+
+                <h3 class="tracking-wide text-blue-900 font-bold text-2xl uppercase mb-2">{{ item.name }}</h3>
+                <div class="font-light text-gray-200 text-lg">
+                    {{ item.title }}
+                </div>
+
           </div>
         {% endfor %}
       </div>

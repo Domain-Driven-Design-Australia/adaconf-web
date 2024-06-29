@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Andrea Magnorsky",
+        "featured": true,
+        "title": "Programmer and Entrepreneur",
+        "bio": "A bio"
+    },
+    {
+        "name": "Sonya Natanzon",
+        "featured": true,
+        "title": "Solution architect at Guardant Health",
+        "bio": "A bio",
+        "img": "sonya-natanzon.jpg"
+    },
+    {
+        "name": "Another speaker",
+        "featured": false,
+        "bio": "A bio"
+    }
+]

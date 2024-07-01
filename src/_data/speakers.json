@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Andrea Magnorsky",
+        "featured": true,
+        "title": "Programmer and Entrepreneur, creator of \"Byte-sized Architecture Sessions\"",
+        "bio": "A bio",
+        "img": "andrea_magnorsky_1702905527.jpeg",
+        "xOffset": 5
+    },
+    {
+        "name": "Sonya Natanzon",
+        "featured": false,
+        "title": "Solution architect at Guardant Health",
+        "bio": "A bio",
+        "img": "sonya-natanzon.jpg",
+        "xOffset": -31
+    }
+]

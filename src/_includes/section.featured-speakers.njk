@@ -7,7 +7,7 @@
           {{ item.templateContent | safe }}
         </div>
       </div>
-      <div class="self-center w-full xl:w-4/5 flex flex-col sm:flex-row flex-wrap px-4 xl:px:0">
+      <div class="self-center justify-center w-full xl:w-4/5 flex flex-col sm:flex-row flex-wrap px-4 xl:px:0">
         {% for item in speakers | selectattr("featured") %}
           <div class="w-full sm:w-1/2 flex flex-col items-center hover:shadow-lg hover:bg-blue-800 hover:bg-opacity-50 px-4 sm:px-8 py-6 sm:py-12">
             

@@ -9,7 +9,7 @@
     },
     {
         "name": "Sonya Natanzon",
-        "featured": false,
+        "featured": true,
         "title": "Solution architect at Guardant Health",
         "bio": "A bio",
         "img": "sonya-natanzon.jpg",

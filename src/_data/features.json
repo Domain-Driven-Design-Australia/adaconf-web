@@ -1,32 +1,42 @@
 [
   {
     "title": "Modelling, analysis and software design practices",
-    "icon": "icon1.svg",
+    "icon": "icon1.png",
     "content": ""
   },
   {
     "title": "Deep dives into aspects of building good software",
-    "icon": "icon2.svg",
-    "content": ""
-  },
-  {
-    "title": "Bridging the gap between business and technology",
-    "icon": "icon3.svg",
+    "icon": "icon2.png",
     "content": ""
   },
   {
     "title": "Systems thinking & socio-technical architecture",
-    "icon": "icon4.svg",
+    "icon": "icon3.png",
     "content": ""
   },
   {
-    "title": "Product design & visual collaboration",
-    "icon": "icon5.svg",
+    "title": "Case studies, experience reports & code demos",
+    "icon": "icon4.png",
     "content": ""
   },
   {
-    "title": "Case studies and experience reports",
-    "icon": "icon6.svg",
+    "title": "Bridging the gap between business and technology",
+    "icon": "icon5.png",
+    "content": ""
+  },
+  {
+    "title": "Visual collaboration & facilitation",
+    "icon": "icon6.png",
+    "content": ""
+  },
+  {
+    "title": "Product Design",
+    "icon": "icon7.png",
+    "content": ""
+  },
+  {
+    "title": "Implementation Retrospectives",
+    "icon": "icon8.png",
     "content": ""
   }
 ]

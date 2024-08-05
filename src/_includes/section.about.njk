@@ -5,6 +5,9 @@
         <h2 class="font-bold tracking-wider text-gray-800 text-4xl mb-4">{{ item.data.title }}</h2>
         <div class="font-light text-black text-base text-left space-y-3">
           {{ item.templateContent | safe }}
+          <div id="map">
+            <iframe class="m-auto" src="{{ item.data.mapUrl | safe }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
         <!--<img class="my-12 max-w-full mx-auto" src="{{ env.baseUrl }}img/undraw_asset_selection_ix3v.svg" alt="ADAConf">-->
       </div>

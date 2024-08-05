@@ -15,10 +15,10 @@
                     <svg viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <pattern id="spimg-{{ item.name | slug }}" patternUnits="userSpaceOnUse" width="100" height="100">
-                                <image xlink:href="{{ env.baseUrl }}img/speakers/{{ item.img }}" x="{{ item.xOffset }}" y="0" width="150" height="100" preserveAspectRatio="xMinYMid meet"/>
+                                <image xlink:href="{{ env.baseUrl }}img/speakers/{{ item.img }}" x="{{ item.xOffset }}" y="{{ item.yOffset }}" width="150" height="100" preserveAspectRatio="xMinYMid meet"/>
                             </pattern>
                         </defs>
-                        <polygon points="25 01 75 01 99 50 75 99 25 99 01 50" fill="url(#spimg-{{ item.name | slug }})" stroke="rgb(229,231,235)" stroke-width="1"/>
+                        <polygon points="28 5 72 5 99 50 72 95 28 95 01 50" fill="url(#spimg-{{ item.name | slug }})" stroke="rgb(229,231,235)" stroke-width="1"/>
                     
                     </svg>
                 </div>

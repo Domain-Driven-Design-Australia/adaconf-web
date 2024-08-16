@@ -7,9 +7,9 @@
           {{ item.templateContent | safe }}
         </div>
       </div>
-      <div class="self-center justify-center w-full xl:w-4/5 flex flex-col sm:flex-row flex-wrap px-4 xl:px:0">
+      <div class="self-center justify-center w-full xl:w-4/5 flex flex-col sm:flex-row flex-wrap px-4 xl:px:0 cursor-pointer">
         {% for speaker in collections.sessionizeSpeakers %}
-          <div class="w-full sm:w-1/2 flex flex-col items-center hover:shadow-lg hover:bg-blue-800 hover:bg-opacity-50 px-4 sm:px-8 py-6 sm:py-12">
+          <div onclick="return sessionize.showModal('immg638u', 'speaker', '{{speaker.id}}');" class="w-full sm:w-1/2 flex flex-col items-center hover:shadow-lg hover:bg-blue-800 hover:bg-opacity-50 px-4 sm:px-8 py-6 sm:py-12">
             
                 <div class="w-1/2">
                     <svg viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">

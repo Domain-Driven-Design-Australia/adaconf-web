@@ -39,7 +39,7 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob('./src/sections/*.md');
   });
 
-
+  // Speaker List
   const filters = eleventyConfig.nunjucksFilters;
   const sessionizeImageUrl = '/img/speakers/sessionize';
   const sessionizeImagePath = path.join("src/static", sessionizeImageUrl);
@@ -65,6 +65,14 @@ module.exports = function (eleventyConfig) {
       }
     }
     return speakers;
+  });
+
+  // Agenda
+  eleventyConfig.addCollection('sessionizeAgenda', async () => {
+    return await fetch('https://sessionize.com/api/v2/immg638u/view/GridSmart', {
+      duration: "1d",
+      type: "string",
+    });
   });
 
   // STATIC FILES

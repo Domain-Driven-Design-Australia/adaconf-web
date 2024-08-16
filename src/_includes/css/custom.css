@@ -175,3 +175,9 @@ html {
     margin-bottom:0px;
   }
 }
+
+#sessionize.sessionize-wrapper {
+  .sz-session__room {
+    @apply mr-3;
+  }
+}

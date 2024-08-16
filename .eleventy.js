@@ -1,6 +1,9 @@
 const htmlmin = require("html-minifier");
 const markdownIt = require('markdown-it');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const fetch = require("@11ty/eleventy-fetch");
+const fs = require("fs/promises");
+const path = require("path");
 
 const isPages = process.env.ELEVENTY_ENV === 'pages'
 const outDir = isPages ? 'docs' : 'public'
@@ -34,6 +37,34 @@ module.exports = function (eleventyConfig) {
   //create collections
   eleventyConfig.addCollection('sections', async (collection) => {
     return collection.getFilteredByGlob('./src/sections/*.md');
+  });
+
+
+  const filters = eleventyConfig.nunjucksFilters;
+  const sessionizeImageUrl = '/img/speakers/sessionize';
+  const sessionizeImagePath = path.join("src/static", sessionizeImageUrl);
+  fs.mkdir(sessionizeImagePath, { recursive: true });
+  eleventyConfig.watchIgnores.add(sessionizeImagePath);
+  eleventyConfig.addCollection('sessionizeSpeakers', async () => {
+    const speakers = await fetch('https://sessionize.com/api/v2/maxks1xn/view/Speakers', {
+      duration: "1d",
+      type: "json",
+    });
+    for (const speaker of speakers) {
+      if (speaker.profilePicture) {
+        const image = await fetch(speaker.profilePicture, {
+          duration: "1d",
+          type: "buffer"
+        });
+        const imageFileName = `${filters.slugify(speaker.fullName)}.png`;
+
+        const relativeImagePath = path.join(sessionizeImagePath, imageFileName);
+        await fs.writeFile(relativeImagePath, image);
+
+        speaker.relativeProfilePicture = path.join(sessionizeImageUrl, imageFileName);
+      }
+    }
+    return speakers;
   });
 
   // STATIC FILES

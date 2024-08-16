@@ -106,3 +106,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Sessionize Images
+src/static/img/speakers/sessionize

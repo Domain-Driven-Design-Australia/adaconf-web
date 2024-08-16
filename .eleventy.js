@@ -63,6 +63,7 @@ module.exports = function (eleventyConfig) {
         await fs.writeFile(relativeImagePath, image);
 
         speaker.relativeProfilePicture = path.join(sessionizeImageUrl, imageFileName);
+        console.log(`Writing ${imageFileName} to ${relativeImagePath} so it can be served from ${speaker.relativeProfilePicture}`);
       }
     }
     return speakers;

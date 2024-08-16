@@ -42,7 +42,7 @@ module.exports = function (eleventyConfig) {
   // Speaker List
   const filters = eleventyConfig.nunjucksFilters;
   const sessionizeImageUrl = '/img/speakers/sessionize';
-  const sessionizeImagePath = path.join("src/static", sessionizeImageUrl);
+  const sessionizeImagePath = path.join(outDir, sessionizeImageUrl);
   fs.mkdir(sessionizeImagePath, { recursive: true });
   eleventyConfig.ignores.delete(sessionizeImagePath);
   eleventyConfig.watchIgnores.add(sessionizeImagePath);
@@ -58,10 +58,10 @@ module.exports = function (eleventyConfig) {
           type: "buffer"
         });
         const imageFileName = `${filters.slugify(speaker.fullName)}.png`;
-
+  
         const relativeImagePath = path.join(sessionizeImagePath, imageFileName);
         await fs.writeFile(relativeImagePath, image);
-
+  
         speaker.relativeProfilePicture = path.join(sessionizeImageUrl, imageFileName);
         console.log(`Writing ${imageFileName} to ${relativeImagePath} so it can be served from ${speaker.relativeProfilePicture}`);
       }

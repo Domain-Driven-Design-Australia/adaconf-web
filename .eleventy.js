@@ -44,6 +44,7 @@ module.exports = function (eleventyConfig) {
   const sessionizeImageUrl = '/img/speakers/sessionize';
   const sessionizeImagePath = path.join("src/static", sessionizeImageUrl);
   fs.mkdir(sessionizeImagePath, { recursive: true });
+  eleventyConfig.ignores.delete(sessionizeImagePath);
   eleventyConfig.watchIgnores.add(sessionizeImagePath);
   eleventyConfig.addCollection('sessionizeSpeakers', async () => {
     const speakers = await fetch('https://sessionize.com/api/v2/maxks1xn/view/Speakers', {

@@ -150,6 +150,10 @@ html {
   }
 }
 
+nav {
+  @apply z-10;
+}
+
 /* mailchimp */
 #mc_embed_signup {
   @apply bg-gray-800;
@@ -180,4 +184,8 @@ html {
   .sz-session__room {
     @apply mr-3;
   }
+}
+
+* {
+  scroll-margin: 1.6em;
 }

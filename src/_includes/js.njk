@@ -10,6 +10,15 @@
     nav.classList.toggle('hidden');
   }
 
+  function navOff() {
+    let btn = document.getElementById('menuBtn');
+    let nav = document.getElementById('menu');
+
+    btn.classList.remove('open');
+    nav.classList.remove('flex');
+    nav.classList.add('hidden');
+  }
+
   window.addEventListener('scroll', function () {
     let btt = document.getElementById('btt');
 

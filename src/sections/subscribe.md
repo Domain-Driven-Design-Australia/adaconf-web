@@ -1,6 +1,6 @@
 ---
 title: Subscribe
-type: register
+type: subscribe
 ---
 
 Subscribe to our mailing list.

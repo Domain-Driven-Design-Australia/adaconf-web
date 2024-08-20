@@ -151,7 +151,7 @@ html {
 }
 
 nav {
-  @apply z-10;
+  @apply z-[500];
 }
 
 /* mailchimp */

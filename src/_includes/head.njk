@@ -2,9 +2,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preload" href="{{ env.baseUrl }}css/page.css" as="style">
+<meta name="referrer" content="origin" />
 <!-- PRELOAD CDN SCRIPTS -->
 <link rel="preconnect" href="https://unpkg.com/popper.js@1" as="script">
 <link rel="preconnect" href="https://unpkg.com/tippy.js@4" as="script">
+<script>
+  // GoatCounter
+
+  window.goatcounter = {no_onload: true, allow_local: true};
+
+  function countWithHash(e) {
+      window.goatcounter.count({
+          path: location.pathname + location.search + location.hash,
+      })
+  };
+
+  function bindEvents(e) {
+    goatcounter.bind_events();
+  };
+
+  window.addEventListener('load', countWithHash);
+  window.addEventListener('load', bindEvents);
+  window.addEventListener('hashchange', countWithHash);
+</script>
 <script data-goatcounter="https://adaconf.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 <link rel="icon" href="{{ env.baseUrl }}img/hexagons.png" type="image/x-icon">

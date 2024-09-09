@@ -3,7 +3,10 @@
   "description": "Analysis, Design & Architecture Conference",
   "title": "Analysis, Design & Architecture Conference",
   "language": "en",
-  "tickets": "https://www.trybooking.com/events/landing/1218766",
+  "tickets": {
+    "label": "Tickets",
+    "url": "https://www.trybooking.com/events/1218766/sessions/4594763/sections/2292714/tickets"
+  },
   "social": [
     {
       "title": "LinkedIn",

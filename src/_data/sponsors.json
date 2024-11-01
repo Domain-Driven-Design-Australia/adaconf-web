@@ -60,10 +60,9 @@
         "textSize": "2xl",
         "sponsors": [            
             {
-                "name": "Kaleida",
-                "logoUrl": "Kaleida Final Files-05.png",
-                "url": "https://kaleida.team/",
-                "height": "50px"
+                "name": "Atlassian",
+                "logoUrl": "Atlassian-logo.svg",
+                "url": "https://atlassian.com/"
             },
             {
                 "name": "Everest Engineering",
@@ -71,21 +70,21 @@
                 "url": "https://everest.engineering/"
             },
             {
-                "name": "Atlassian",
-                "logoUrl": "Atlassian-logo.svg",
-                "url": "https://atlassian.com/"
-            },
-            {
-                "name": "Beer-Driven Devs",
-                "logoUrl": "BDDLogo-v2-wide.svg",
-                "url": "https://www.beerdriven.dev/"
+                "name": "Kaleida",
+                "logoUrl": "Kaleida Final Files-05.png",
+                "url": "https://kaleida.team/",
+                "height": "50px"
             },
             {
                 "name": "Team Topologies",
                 "logoUrl": "main-logo-blue-text.png",
                 "url": "https://teamtopologies.com/"
+            },
+            {
+                "name": "Beer-Driven Devs",
+                "logoUrl": "BDDLogo-v2-wide.svg",
+                "url": "https://www.beerdriven.dev/"
             }
-
         ]
     }
 ]

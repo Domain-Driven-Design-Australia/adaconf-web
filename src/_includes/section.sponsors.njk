@@ -8,12 +8,11 @@
             {% for tier in sponsors %}
                 <div class="w-full">
                     <h3 class="tracking-wide font-bold text-{{tier.textSize}} mb-6" style="color:{{tier.color}}">{{ tier.level }}</h3>
-                    <div class="flex flex-wrap gap-6 mb-16 justify-center">
+                    <div class="flex flex-wrap gap-6 mb-16 justify-center items-baseline">
                         {% for sponsor in tier.sponsors %}
                             <div>
                                 <a href="{{sponsor.url}}" target="_blank">
-                                    
-                                    <img src="/img/sponsors/{{sponsor.logoUrl}}" style="max-height:{{tier.height}}" class="w-full h-full object-contain" alt="{{sponsor.name}}" title="{{sponsor.name}}"/>
+                                    <img src="/img/sponsors/{{sponsor.logoUrl}}" style="max-height:{{sponsor.height | default(tier.height)}}{% if sponsor.height %}; height: {{sponsor.height}}{%endif%}" class="w-full h-full object-contain" alt="{{sponsor.name}}" title="{{sponsor.name}}"/>
                                 </a>
                             </div>
                         {% endfor %}

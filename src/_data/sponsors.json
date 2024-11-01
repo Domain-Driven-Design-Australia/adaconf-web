@@ -17,18 +17,19 @@
         "level": "Gold",
         "color": "#FFD700",
         "numPerRow": 2,
-        "height": "100px",
+        "height": "80px",
         "textSize": "4xl",
         "sponsors": [
-            {
-                "name": "Digital Sublime",
-                "logoUrl": "ds-logo-1.svg",
-                "url": "https://digitalsublime.com.au/"
-            },
             {
                 "name": "Chris Simon - Technology Coaching & Advisory",
                 "logoUrl": "Full logo (dark grey).png",
                 "url": "https://chrissimon.au"
+            },
+            {
+                "name": "Digital Sublime",
+                "logoUrl": "ds-logo-1.svg",
+                "height": "125px",
+                "url": "https://digitalsublime.com.au/"
             }
         ]
     },
@@ -36,7 +37,7 @@
         "level": "Silver",
         "color": "#C0C0C0",
         "numPerRow": 2,
-        "height": "50px",
+        "height": "60px",
         "textSize": "4xl",
         "sponsors": [
             {
@@ -61,7 +62,8 @@
             {
                 "name": "Kaleida",
                 "logoUrl": "Kaleida Final Files-05.png",
-                "url": "https://kaleida.team/"
+                "url": "https://kaleida.team/",
+                "height": "50px"
             },
             {
                 "name": "Everest Engineering",

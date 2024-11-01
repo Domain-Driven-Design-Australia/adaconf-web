@@ -1,0 +1,89 @@
+[
+    {
+        "level": "Platinum",
+        "color": "#E5E4E2",
+        "numPerRow": 1,
+        "height": "120px",
+        "textSize": "4xl",
+        "sponsors": [
+            {
+                "name": "Contextive",
+                "logoUrl": "contextive-primary.png",
+                "url": "https://contextive.tech"
+            }
+        ]
+    },
+    {
+        "level": "Gold",
+        "color": "#FFD700",
+        "numPerRow": 2,
+        "height": "100px",
+        "textSize": "4xl",
+        "sponsors": [
+            {
+                "name": "Digital Sublime",
+                "logoUrl": "ds-logo-1.svg",
+                "url": "https://digitalsublime.com.au/"
+            },
+            {
+                "name": "Chris Simon - Technology Coaching & Advisory",
+                "logoUrl": "Full logo (dark grey).png",
+                "url": "https://chrissimon.au"
+            }
+        ]
+    },
+    {
+        "level": "Silver",
+        "color": "#C0C0C0",
+        "numPerRow": 2,
+        "height": "50px",
+        "textSize": "4xl",
+        "sponsors": [
+            {
+                "name": "Mantel Group",
+                "logoUrl": "MG_Logo_Positive.png",
+                "url": "https://mantelgroup.com.au"
+            },
+            {
+                "name": "AWS",
+                "logoUrl": "AWS_logo_RGB.png",
+                "url": "https://aws.com"
+            }
+        ]
+    },
+    {
+        "level": "Community Supporters",
+        "color": "#999",
+        "numPerRow": 3,
+        "height": "40px",
+        "textSize": "2xl",
+        "sponsors": [            
+            {
+                "name": "Kaleida",
+                "logoUrl": "Kaleida Final Files-05.png",
+                "url": "https://kaleida.team/"
+            },
+            {
+                "name": "Everest Engineering",
+                "logoUrl": "Everest Logo.png",
+                "url": "https://everest.engineering/"
+            },
+            {
+                "name": "Atlassian",
+                "logoUrl": "Atlassian-logo.svg",
+                "url": "https://atlassian.com/"
+            },
+            {
+                "name": "Beer-Driven Devs",
+                "logoUrl": "BDDLogo-v2-wide.svg",
+                "url": "https://www.beerdriven.dev/"
+            },
+            {
+                "name": "Team Topologies",
+                "logoUrl": "main-logo-blue-text.png",
+                "url": "https://teamtopologies.com/"
+            }
+
+        ]
+    }
+]

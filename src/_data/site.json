@@ -3,11 +3,11 @@
   "description": "Analysis, Design & Architecture Conference",
   "title": "Analysis, Design & Architecture Conference",
   "event": {
-    "date": "Friday 8th Nov 2024",
+    "date": "Friday 14th Nov 2025",
     "time": "8:30am-5:30pm"
   },
   "language": "en",
-  "tickets": {
+  "_tickets": {
     "label": "Tickets",
     "url": "https://www.trybooking.com/events/1218766/sessions/4594763/sections/2292714/tickets"
   },

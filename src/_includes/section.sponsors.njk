@@ -23,14 +23,16 @@
         <div class="font-light text-gray-900 mb-6">
             Interested in <a class="hover:text-gray-800 text-purple-600 no-underline" href="/sponsors">joining as a sponsor</a>?
         </div>
-        <div class="flex flex-row w-full justify-center pb-12">
-            <a class="px-10 py-2 text-gray-200 bg-blue-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
-                data-goatcounter-referrer="Agenda"
-                data-goatcounter-click="trybooking.com"
-                href="{{site.tickets.url}}">
-                {{site.tickets.label}}
-            </a>
-        </div>
+        {% if site.tickets %}
+            <div class="flex flex-row w-full justify-center pb-12">
+                <a class="px-10 py-2 text-gray-200 bg-blue-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
+                    data-goatcounter-referrer="Agenda"
+                    data-goatcounter-click="trybooking.com"
+                    href="{{site.tickets.url}}">
+                    {{site.tickets.label}}
+                </a>
+            </div>
+        {% endif %}
       </div>
     </div>
   {% endif %}

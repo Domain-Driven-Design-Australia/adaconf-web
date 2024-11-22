@@ -27,12 +27,14 @@
           <h3 class="font-bold tracking-widest text-blue-200 text-2xl my-6">{{ item.data.afterTitle }}</h3>
         </div>
       {% endif %}
-      <div class="flex flex-row w-full justify-center pt-6">
-        <a class="px-10 py-2 text-gray-200 bg-purple-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
-          data-goatcounter-click="trybooking.com"
-          data-goatcounter-referrer="Topics"
-          href="{{site.tickets.url}}">{{site.tickets.label}}</a>
-      </div>
+      {% if site.tickets %}
+        <div class="flex flex-row w-full justify-center pt-6">
+          <a class="px-10 py-2 text-gray-200 bg-purple-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
+            data-goatcounter-click="trybooking.com"
+            data-goatcounter-referrer="Topics"
+            href="{{site.tickets.url}}">{{site.tickets.label}}</a>
+        </div>
+      {% endif %}
     </div>
   {% endif %}
 {% endfor %}

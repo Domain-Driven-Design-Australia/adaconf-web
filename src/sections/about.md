@@ -17,7 +17,7 @@ Key dates:
 * CfS close: TBD
 * CfS process closed and participants informed: TBD
 * Public schedule published: TBD
-* Conference day: 14th November 2024
+* Conference day: 14th November 2025
 
 <!-- We will start reaching out to speakers prior to the CfS close, but will ensure we respond to all submissions by the 15th of August -->
 

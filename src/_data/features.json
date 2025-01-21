@@ -1,42 +1,32 @@
 [
   {
-    "title": "Modelling, analysis and software design practices",
-    "icon": "icon1.png",
+    "title": "Evolutionary Architecture",
+    "icon": "icon8.png",
     "content": ""
   },
   {
-    "title": "Deep dives into aspects of building good software",
+    "title": "Responding to Change",
     "icon": "icon2.png",
     "content": ""
   },
   {
-    "title": "Systems thinking & socio-technical architecture",
-    "icon": "icon3.png",
-    "content": ""
-  },
-  {
-    "title": "Case studies, experience reports & code demos",
-    "icon": "icon4.png",
-    "content": ""
-  },
-  {
-    "title": "Bridging the gap between business and technology",
+    "title": "Predicting Change",
     "icon": "icon5.png",
     "content": ""
   },
   {
-    "title": "Visual collaboration & facilitation",
-    "icon": "icon6.png",
-    "content": ""
-  },
-  {
-    "title": "Product Design",
+    "title": "Unexpected Changes",
     "icon": "icon7.png",
     "content": ""
   },
   {
-    "title": "Implementation Retrospectives",
-    "icon": "icon8.png",
+    "title": "Going against 'best practice'",
+    "icon": "icon1.png",
+    "content": ""
+  },
+  {
+    "title": "Novel approaches to familiar problems",
+    "icon": "icon6.png",
     "content": ""
   }
 ]

@@ -2,7 +2,8 @@
   <div class="self-center items-center flex flex-col sm:flex-row w-full md:w-5/6 xl:w-2/3 px-4 sm:px-0">
     <div class="w-full text-center sm:text-left sm:w-1/2 py-12 sm:px-8">
       <h1 class="tracking-wide text-purple-600 text-2xl mb-6">
-        Introducing <span class="text-gray-800 font-bold tracking tracking-widest">ADAConf</span>
+        Introducing
+        <span class="text-gray-800 font-bold tracking tracking-widest">ADAConf</span>
       </h1>
       <h2 class="font-bold tracking-widest text-4xl">
         Your community for:
@@ -18,31 +19,28 @@
           <li class="content__container__list__item xl:pl-3">Modelling</li>
         </ul>
       </span>
-      <p class="font-bold tracking-widest sm:text-3xl text-xl">Location TBD
-        
-        {# <a href="#map"><img class="inline-block" style="margin-top:-2px;height:30px" src="{{ env.baseUrl }}img/map.svg"></a> #}
-        
-        <br/>{{site.event.date}}<br/>{{site.event.time}}</p>
+      <p class="font-bold tracking-widest sm:text-3xl text-xl">Rydges Melbourne
+        <a href="#map">
+          <img class="inline-block" style="margin-top:-2px;height:30px" src="{{ env.baseUrl }}img/map.svg"></a>
+          <br/>{{ site.event.date }}<br/>{{ site.event.time }}</p>
+      </div>
+      <div class="w-full sm:w-1/3">
+        <img class="float-right" src="{{ env.baseUrl }}img/hexagons.png" alt="ADAConf Hexagons"></div>
+      </div>
     </div>
-    <div class="w-full sm:w-1/3">
-      <img class="float-right" src="{{ env.baseUrl }}img/hexagons.png" alt="ADAConf Hexagons">
+    <div class="mb-12 pb-12">
+      {% if site.tickets %}
+        <div class="flex flex-row w-full justify-center pb-12">
+          <a class="px-10 py-2 text-gray-200 bg-blue-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red" data-goatcounter-click="trybooking.com" data-goatcounter-referrer="Head" href="{{ site.tickets.url }}">
+            {{ site.tickets.label }}
+          </a>
+        </div>
+      {% endif %}
+      <div class="flex flex-row w-full justify-center pb-6">
+        <a
+          class="px-10 py-2 text-gray-200 bg-purple-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
+          href="#about">
+          More Information
+        </a>
+      </div>
     </div>
-  </div>
-</div>
-<div class="mb-12 pb-12">
-  {% if site.tickets %}
-    <div class="flex flex-row w-full justify-center pb-12">
-      <a class="px-10 py-2 text-gray-200 bg-blue-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
-        data-goatcounter-click="trybooking.com"
-        data-goatcounter-referrer="Head"
-        href="{{site.tickets.url}}">
-        {{site.tickets.label}}
-      </a>
-    </div>
-  {% endif %}
-  <div class="flex flex-row w-full justify-center pb-6">
-    <a class="px-10 py-2 text-gray-200 bg-purple-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red" href="#about">
-      More Information
-    </a>
-  </div>
-</div>

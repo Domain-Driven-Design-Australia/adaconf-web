@@ -3,4 +3,4 @@ title: Conference Topics
 type: features
 ---
 
-Some of the ideas we'll be exploring at ADAConf:
+The theme for ADAConf 2025 is "Architectural Change" - you'll hear all about:

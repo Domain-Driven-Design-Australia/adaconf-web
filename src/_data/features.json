@@ -1,32 +1,27 @@
 [
   {
-    "title": "Evolutionary Architecture",
+    "title": "Evolutionary Architecture Practices",
     "icon": "icon8.png",
-    "content": ""
+    "content": "How systems can adapt over time"
   },
   {
-    "title": "Responding to Change",
-    "icon": "icon2.png",
-    "content": ""
+    "title": "Novel Approaches",
+    "icon": "icon5.png",
+    "content": "Challenging best practices - when to rethink conventional wisdom"
   },
   {
     "title": "Predicting Change",
-    "icon": "icon5.png",
-    "content": ""
+    "icon": "icon2.png",
+    "content": "Techniques for anticipating shifts"
   },
   {
     "title": "Unexpected Changes",
     "icon": "icon7.png",
-    "content": ""
+    "content": "Case studies on handling surprise"
   },
   {
-    "title": "Going against 'best practice'",
+    "title": "Systems Thinking & Modelling",
     "icon": "icon1.png",
-    "content": ""
-  },
-  {
-    "title": "Novel approaches to familiar problems",
-    "icon": "icon6.png",
-    "content": ""
+    "content": "Tools to manage Architectural Complexity"
   }
 ]

@@ -5,23 +5,28 @@
     "content": "How systems can adapt over time"
   },
   {
-    "title": "Novel Approaches",
-    "icon": "icon5.png",
-    "content": "Challenging best practices - when to rethink conventional wisdom"
+    "title": "Responding to Change",
+    "icon": "icon7.png",
+    "content": "Design & Architecture practices to facilitate responding to change"
   },
   {
     "title": "Predicting Change",
     "icon": "icon2.png",
-    "content": "Techniques for anticipating shifts"
+    "content": "Modelling & analysis techniques that enable predicting change"
   },
   {
-    "title": "Unexpected Changes",
-    "icon": "icon7.png",
-    "content": "Case studies on handling surprise"
-  },
-  {
-    "title": "Systems Thinking & Modelling",
+    "title": "Socio-technical Systems Thinking",
     "icon": "icon1.png",
-    "content": "Tools to manage Architectural Complexity"
+    "content": "Mitigate the risk and impact of unexpected change across the organisation"
+  },
+  {
+    "title": "Novel Approaches",
+    "icon": "icon5.png",
+    "content": "Techniques that challenge 'best practice'"
+  },
+  {
+    "title": "Case Studies",
+    "icon": "icon3.png",
+    "content": "Case studies, experience reports & retrospectives"
   }
 ]

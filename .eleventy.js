@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
 
   // shortcode to render markdown from string => {{ STRING | markdown | safe }}
-  eleventyConfig.addFilter('markdown', function(value) {
+  eleventyConfig.addFilter('markdown', function (value) {
     let markdown = require('markdown-it')({
       html: true
     });
@@ -40,34 +40,34 @@ module.exports = function (eleventyConfig) {
   });
 
   // // Speaker List
-  // const filters = eleventyConfig.nunjucksFilters;
-  // const sessionizeImageUrl = '/img/speakers/sessionize';
-  // const sessionizeImagePath = path.join(outDir, sessionizeImageUrl);
-  // fs.mkdir(sessionizeImagePath, { recursive: true });
-  // eleventyConfig.ignores.delete(sessionizeImagePath);
-  // eleventyConfig.watchIgnores.add(sessionizeImagePath);
-  // eleventyConfig.addCollection('sessionizeSpeakers', async () => {
-  //   const speakers = await fetch('https://sessionize.com/api/v2/maxks1xn/view/Speakers', {
-  //     duration: "1d",
-  //     type: "json",
-  //   });
-  //   for (const speaker of speakers) {
-  //     if (speaker.profilePicture) {
-  //       const image = await fetch(speaker.profilePicture, {
-  //         duration: "1d",
-  //         type: "buffer"
-  //       });
-  //       const imageFileName = `${filters.slugify(speaker.fullName)}.png`;
-  
-  //       const relativeImagePath = path.join(sessionizeImagePath, imageFileName);
-  //       await fs.writeFile(relativeImagePath, image);
-  
-  //       speaker.relativeProfilePicture = path.join(sessionizeImageUrl, imageFileName);
-  //       console.log(`Writing ${imageFileName} to ${relativeImagePath} so it can be served from ${speaker.relativeProfilePicture}`);
-  //     }
-  //   }
-  //   return speakers;
-  // });
+  const filters = eleventyConfig.nunjucksFilters;
+  const sessionizeImageUrl = '/img/speakers/sessionize';
+  const sessionizeImagePath = path.join(outDir, sessionizeImageUrl);
+  fs.mkdir(sessionizeImagePath, { recursive: true });
+  eleventyConfig.ignores.delete(sessionizeImagePath);
+  eleventyConfig.watchIgnores.add(sessionizeImagePath);
+  eleventyConfig.addCollection('sessionizeSpeakers', async () => {
+    const speakers = await fetch('https://sessionize.com/api/v2/656ttfhs/view/Speakers', {
+      duration: "1d",
+      type: "json",
+    });
+    for (const speaker of speakers) {
+      if (speaker.profilePicture) {
+        const image = await fetch(speaker.profilePicture, {
+          duration: "1d",
+          type: "buffer"
+        });
+        const imageFileName = `${filters.slugify(speaker.fullName)}.png`;
+
+        const relativeImagePath = path.join(sessionizeImagePath, imageFileName);
+        await fs.writeFile(relativeImagePath, image);
+
+        speaker.relativeProfilePicture = path.join(sessionizeImageUrl, imageFileName);
+        console.log(`Writing ${imageFileName} to ${relativeImagePath} so it can be served from ${speaker.relativeProfilePicture}`);
+      }
+    }
+    return speakers;
+  });
 
   // // Agenda
   // eleventyConfig.addCollection('sessionizeAgenda', async () => {
@@ -81,8 +81,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ './src/static/': '/' });
 
   // TRANSFORM -- Minify HTML Output
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    if( outputPath && outputPath.endsWith(".html") ) {
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,

@@ -39,7 +39,7 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob('./src/sections/*.md');
   });
 
-  // // Speaker List
+  // Speaker List
   const filters = eleventyConfig.nunjucksFilters;
   const sessionizeImageUrl = '/img/speakers/sessionize';
   const sessionizeImagePath = path.join(outDir, sessionizeImageUrl);
@@ -69,13 +69,33 @@ module.exports = function (eleventyConfig) {
     return speakers;
   });
 
-  // // Agenda
-  // eleventyConfig.addCollection('sessionizeAgenda', async () => {
-  //   return await fetch('https://sessionize.com/api/v2/immg638u/view/GridSmart', {
-  //     duration: "1d",
-  //     type: "string",
-  //   });
-  // });
+  // Workshops
+  eleventyConfig.addCollection('sessionizeWorkshops', async () => {
+    let workshops = await fetch('https://sessionize.com/api/v2/3qfvo45q/view/Sessions', {
+      duration: "1d",
+      type: "json",
+    });
+    for (const workshopGroup of workshops) {
+      if (workshopGroup.groupName.match(/1 day/)) {
+        workshopGroup.groupName = "One Day Workshops";
+      } else {
+        workshopGroup.groupName = "Two Day Workshops";
+      }
+    }
+    return workshops;
+  });
+
+  // Agenda
+  eleventyConfig.addCollection('sessionizeAgenda', async () => {
+    return await fetch('https://sessionize.com/api/v2/z14jafzm/view/GridSmart', {
+      duration: "1d",
+      type: "string",
+    });
+  });
+
+  eleventyConfig.addFilter("speaker", (speakers, speakerId) =>
+    speakers.find(sp => sp.id == speakerId)
+  );
 
   // STATIC FILES
   eleventyConfig.addPassthroughCopy({ './src/static/': '/' });

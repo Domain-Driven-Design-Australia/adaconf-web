@@ -11,6 +11,10 @@
     "label": "Tickets",
     "url": "https://www.trybooking.com/events/1356285/sessions/5419648/sections/2586288/tickets"
   },
+  "workshopTickets": {
+    "label": "Pre-conference Workshop Tickets",
+    "url": "https://www.trybooking.com/events/1356285/sessions/5419648/sections/2586288/tickets"
+  },
   "appUrl": "https://adaconf-2025.sessionize.com/",
   "social": [
     {

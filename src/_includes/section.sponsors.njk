@@ -1,39 +1,59 @@
-{% for item in collections.sections %}
-  {% if item.data.type === 'sponsors' %}
-    <div id="sponsors" class="w-full min-h-screen flex flex-col justify-center items-center bg-white py-12">
-      <div class="self-center text-center w-full sm:w-2/3 xl:w-1/2 px-4 sm:px-0">
-        <h2 class="tracking-wide text-blue-900 font-bold text-4xl mb-8">{{ item.data.title }}</h2>
-        <div class="font-light text-gray-200 mb-6">
-            
-            {% for tier in sponsors %}
-                <div class="w-full">
-                    <h3 class="tracking-wide font-bold text-{{tier.textSize}} mb-6" style="color:{{tier.color}}">{{ tier.level }}</h3>
-                    <div class="flex flex-wrap gap-6 mb-16 justify-center items-baseline">
-                        {% for sponsor in tier.sponsors %}
-                            <div>
-                                <a href="{{sponsor.url}}" target="_blank">
-                                    <img src="/img/sponsors/{{sponsor.logoUrl}}" style="max-height:{{sponsor.height | default(tier.height)}}{% if sponsor.height %}; height: {{sponsor.height}}{%endif%}" class="w-full h-full object-contain" alt="{{sponsor.name}}" title="{{sponsor.name}}"/>
-                                </a>
-                            </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            {% endfor %}
+{% for item in collections.sections %} {% if item.data.type === 'sponsors' %}
+<div
+  id="sponsors"
+  class="w-full min-h-screen flex flex-col justify-center items-center bg-white py-12"
+>
+  <div class="self-center text-center w-full sm:w-2/3 xl:w-1/2 px-4 sm:px-0">
+    <h2 class="tracking-wide text-blue-900 font-bold text-4xl mb-8">
+      {{ item.data.title }}
+    </h2>
+    <div class="font-light text-gray-200 mb-6">
+      {% for tier in sponsors %}
+      <div class="w-full">
+        <h3
+          class="tracking-wide font-bold text-{{tier.textSize}} mb-6"
+          style="color:{{tier.color}}"
+        >
+          {{ tier.level }}
+        </h3>
+        <div class="flex flex-wrap gap-12 mb-16 justify-center items-baseline">
+          {% for sponsor in tier.sponsors %}
+          <div>
+            <a href="{{sponsor.url}}" target="_blank">
+              <img
+                src="/img/sponsors/{{sponsor.logoUrl}}"
+                style="max-height:{{sponsor.height | default(tier.height)}}{% if sponsor.height %}; height: {{sponsor.height}}{%endif%}"
+                class="w-full h-full object-contain"
+                alt="{{sponsor.name}}"
+                title="{{sponsor.name}}"
+              />
+            </a>
+          </div>
+          {% endfor %}
         </div>
-        <div class="font-light text-gray-900 mb-6">
-            Interested in <a class="hover:text-gray-800 text-purple-600 no-underline" href="/sponsors">joining as a sponsor</a>?
-        </div>
-        {% if site.tickets %}
-            <div class="flex flex-row w-full justify-center pb-12">
-                <a class="px-10 py-2 text-gray-200 bg-blue-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
-                    data-goatcounter-referrer="Agenda"
-                    data-goatcounter-click="trybooking.com"
-                    href="{{site.tickets.url}}">
-                    {{site.tickets.label}}
-                </a>
-            </div>
-        {% endif %}
       </div>
+      {% endfor %}
     </div>
-  {% endif %}
-{% endfor %}
+    <div class="font-light text-gray-900 mb-6">
+      Interested in
+      <a
+        class="hover:text-gray-800 text-purple-600 no-underline"
+        href="/sponsors"
+        >joining as a sponsor</a
+      >?
+    </div>
+    {% if site.tickets %}
+    <div class="flex flex-row w-full justify-center pb-12">
+      <a
+        class="px-10 py-2 text-gray-200 bg-blue-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
+        data-goatcounter-referrer="Agenda"
+        data-goatcounter-click="trybooking.com"
+        href="{{site.tickets.url}}"
+      >
+        {{site.tickets.label}}
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %} {% endfor %}

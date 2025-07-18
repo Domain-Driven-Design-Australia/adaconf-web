@@ -1,3 +1,71 @@
 [
-    
+    {
+        "level": "Platinum",
+        "color": "#7C3AED",
+        "numPerRow": 1,
+        "height": "400px",
+        "textSize": "4xl",
+        "sponsors": [
+            {
+                "name": "CBA",
+                "logoUrl": "CBA Stacked Wordmark @4x sRGB.jpg",
+                "url": "https://cba.com.au"
+            }
+        ]
+    },
+    {
+        "level": "Gold",
+        "color": "#FFD700",
+        "numPerRow": 2,
+        "height": "80px",
+        "textSize": "4xl",
+        "_sponsors": [
+            {
+                "name": "AWS",
+                "logoUrl": "AWS_logo_RGB.png",
+                "url": "https://aws.com"
+            }
+        ],
+        "sponsors": [
+            {
+                "name": "Contextive",
+                "logoUrl": "contextive-primary.png",
+                "url": "https://contextive.tech"
+            }
+        ]
+    },
+    {
+        "level": "Silver",
+        "color": "#C0C0C0",
+        "numPerRow": 2,
+        "height": "60px",
+        "textSize": "4xl",
+        "sponsors": [
+            {
+                "name": "REA",
+                "logoUrl": "reagroup_logo_h_rgb.svg",
+                "url": "https://rea.com.au"
+            },
+            {
+                "name": "DDD Academy",
+                "logoUrl": "DDD-Academy.png",
+                "height": "100px",
+                "utl": "https://ddd.academy"
+            }
+        ]
+    },
+    {
+        "level": "Networking Drinks",
+        "color": "#D0D00",
+        "numPerRow": 2,
+        "height": "40px",
+        "textSize": "2xl",
+        "sponsors": [
+            {
+                "name": "Everest Engineering",
+                "logoUrl": "Everest Logo.png",
+                "url": "https://everest.engineering"
+            }
+        ]
+    }
 ]

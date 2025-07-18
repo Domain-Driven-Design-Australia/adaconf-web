@@ -6,14 +6,15 @@
     "date": "Friday 14th Nov 2025",
     "time": "8:30am-5:30pm"
   },
+  "cfpActive": false,
   "language": "en",
   "tickets": {
-    "label": "Tickets",
+    "label": "Conference Tickets",
     "url": "https://www.trybooking.com/events/1356285/sessions/5419648/sections/2586288/tickets"
   },
   "workshopTickets": {
     "label": "Pre-conference Workshop Tickets",
-    "url": "https://www.trybooking.com/events/1356285/sessions/5419648/sections/2586288/tickets"
+    "url": "https://www.trybooking.com/events/1439100/sessions/5772609/sections"
   },
   "appUrl": "https://adaconf-2025.sessionize.com/",
   "social": [

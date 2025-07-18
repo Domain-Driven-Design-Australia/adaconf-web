@@ -76,10 +76,12 @@ module.exports = function (eleventyConfig) {
       type: "json",
     });
     for (const workshopGroup of workshops) {
-      if (workshopGroup.groupName.match(/1/)) {
+      if (workshopGroup.groupName.match(/1/) || workshopGroup.groupName.match(/One/)) {
         workshopGroup.groupName = "One Day Workshops";
+        workshopGroup.dates = "Thu 13th Nov, 2025";
       } else {
         workshopGroup.groupName = "Two Day Workshops";
+        workshopGroup.dates = "Wed 12th - Thu 13th Nov, 2025";
       }
     }
     return workshops;

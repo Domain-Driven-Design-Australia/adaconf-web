@@ -13,16 +13,16 @@
       <h4 class="text-blue-600 font-bold text-2xl mt-8 mb-4">
         {{ workshopGroup.groupName }}
       </h4>
-      <div class="flex flex-col sm:flex-row flex-wrap gap-4">
+      <div class="flex flex-col flex-wrap content-center gap-4">
         {% for workshop in workshopGroup.sessions %}
         <div
-          class="border-solid text-left rounded-lg flex-1 border-2 p-4 mr-4 ml-4 border-blue-300"
+          class="border-solid sm:w-3/4 w-full text-left rounded-lg border-2 p-4 border-blue-300"
         >
           <div class="flex h-full flex-col justify-between">
             <h5 class="text-blue-500 text-2xl mb-4">{{workshop.title}}</h5>
-            <div class="align-bottom text-md text-gray-800 mt-2">
+            <div class="text-md text-gray-800 mt-2">
               <img
-                class="w-20 float-left mr-2 rounded-xl"
+                class="inline align-middle w-20 mr-2 rounded-xl"
                 src="{{ (collections.sessionizeSpeakers | speaker(workshop.speakers[0].id)).relativeProfilePicture }}"
               />
               {{workshop.speakers[0].name}}

@@ -7,28 +7,44 @@
     <h2 class="tracking-wide text-blue-900 font-bold text-4xl mb-4">
       {{ item.data.title }}
     </h2>
+    <div>
+      Karstens Melbourne<br />
+      123 Queen Street, Melbourne, Melbourne VIC 3000
+    </div>
     <div class="font-light text-gray-200 text-xl mb-6">
       {% for workshopGroup in collections.sessionizeWorkshops %} {% if
       workshopGroup.sessions.length %}
       <h4 class="text-blue-600 font-bold text-2xl mt-8 mb-4">
         {{ workshopGroup.groupName }}
       </h4>
+      <div class="text-blue-400">{{workshopGroup.dates}}</div>
       <div class="flex flex-col flex-wrap content-center gap-4">
-        {% for workshop in workshopGroup.sessions %}
-        <div
-          class="border-solid sm:w-3/4 w-full text-left rounded-lg border-2 p-4 border-blue-300"
+        {% for workshop in workshopGroup.sessions %} {% set speaker =
+        (collections.sessionizeSpeakers | speaker(workshop.speakers[0].id)) %}
+        <a
+          class="block relative border-solid sm:w-3/4 w-full text-left rounded-lg border-2 p-4 border-blue-500"
+          href="{{ workshop.questionAnswers[0].answer }}"
         >
-          <div class="flex h-full flex-col justify-between">
-            <h5 class="text-blue-500 text-2xl mb-4">{{workshop.title}}</h5>
-            <div class="text-md text-gray-800 mt-2">
-              <img
-                class="inline align-middle w-20 mr-2 rounded-xl"
-                src="{{ (collections.sessionizeSpeakers | speaker(workshop.speakers[0].id)).relativeProfilePicture }}"
-              />
-              {{workshop.speakers[0].name}}
-            </div>
+          <h5 class="text-blue-600 text-2xl mb-4">{{workshop.title}}</h5>
+          <div class="text-blue-400 text-lg mb-2">
+            {{workshop.speakers[0].name}}
           </div>
-        </div>
+          <div class="text-gray-500 text-sm">
+            <img
+              class="inline align-top float-left w-20 mr-2 rounded-xl"
+              src="{{ speaker.relativeProfilePicture }}"
+            />
+            <span
+              >{{workshop.questionAnswers[1].answer | escape | striptags(true) |
+              nl2br}}</span
+            >
+          </div>
+          <div
+            class="rounded-full inline float-right bg-blue-500 text-white text-xs p-2 px-4"
+          >
+            Read more...
+          </div>
+        </a>
         {% endfor %}
       </div>
       {% endif %} {% endfor %}

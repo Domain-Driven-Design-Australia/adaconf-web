@@ -19,18 +19,17 @@
         "numPerRow": 2,
         "height": "80px",
         "textSize": "4xl",
-        "_sponsors": [
-            {
-                "name": "AWS",
-                "logoUrl": "AWS_logo_RGB.png",
-                "url": "https://aws.com"
-            }
-        ],
         "sponsors": [
             {
                 "name": "Contextive",
                 "logoUrl": "contextive-primary.png",
                 "url": "https://contextive.tech"
+            },
+            {
+                "name": "AWS",
+                "logoUrl": "AWS_logo_RGB.png",
+                "url": "https://aws.com",
+                "height": "100px"
             }
         ]
     },

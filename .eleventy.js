@@ -89,7 +89,7 @@ module.exports = function (eleventyConfig) {
 
   // Agenda
   eleventyConfig.addCollection('sessionizeAgenda', async () => {
-    return await fetch('https://sessionize.com/api/v2/z14jafzm/view/GridSmart', {
+    return await fetch('https://sessionize.com/api/v2/z14jafzm/view/Sessions', {
       duration: "1d",
       type: "string",
     });

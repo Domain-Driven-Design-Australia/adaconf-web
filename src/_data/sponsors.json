@@ -43,18 +43,18 @@
             {
                 "name": "REA",
                 "logoUrl": "reagroup_logo_h_rgb.svg",
-                "url": "https://rea.com.au"
+                "url": "http://realestate.com.au/"
             },
             {
                 "name": "DDD Academy",
                 "logoUrl": "DDD-Academy.png",
                 "height": "100px",
-                "utl": "https://ddd.academy"
+                "url": "https://ddd.academy"
             },
             {
                 "name": "zWare",
                 "logoUrl": "zWare-Logo.png",
-                "utl": "https://zware.com"
+                "url": "https://zware.com"
             }
         ]
     },
@@ -82,7 +82,7 @@
             {
                 "name": "zWare",
                 "logoUrl": "zWare-Logo.png",
-                "utl": "https://zware.com"
+                "url": "https://zware.com"
             }
         ]
     }

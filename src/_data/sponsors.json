@@ -50,6 +50,11 @@
                 "logoUrl": "DDD-Academy.png",
                 "height": "100px",
                 "utl": "https://ddd.academy"
+            },
+            {
+                "name": "zWare",
+                "logoUrl": "zWare-Logo.png",
+                "utl": "https://zware.com"
             }
         ]
     },
@@ -64,6 +69,20 @@
                 "name": "Everest Engineering",
                 "logoUrl": "Everest Logo.png",
                 "url": "https://everest.engineering"
+            }
+        ]
+    },
+    {
+        "level": "Coffee",
+        "color": "#D0D00",
+        "numPerRow": 2,
+        "height": "20px",
+        "textSize": "2xl",
+        "sponsors": [
+            {
+                "name": "zWare",
+                "logoUrl": "zWare-Logo.png",
+                "utl": "https://zware.com"
             }
         ]
     }

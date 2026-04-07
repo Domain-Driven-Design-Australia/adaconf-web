@@ -1,27 +1,38 @@
-const fs = require('fs');
-const path = require('path');
-const postcss = require('postcss');
+import { readFileSync } from 'fs';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
 
-module.exports = class {
-  async data() {
-    const cssDir = path.join(__dirname, '..', '_includes', 'css');
-    const rawFilepath = path.join(cssDir, '_page.css');
+import postcss from 'postcss';
+import postCssImport from 'postcss-import';
+import autoprefixer from 'autoprefixer';
+import tailwindcss from 'tailwindcss';
+import cssnano from 'cssnano';
 
-    return {
-      permalink: `css/page.css`,
-      rawFilepath,
-      rawCss: fs.readFileSync(rawFilepath),
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+export default class {
+    async data() {
+        const cssDir = join(__dirname, '..', '_includes', 'css');
+        const rawFilepath = join(cssDir, '_page.css');
+
+        return {
+            permalink: `css/page.css`,
+            rawFilepath,
+            rawCss: readFileSync(rawFilepath),
+        };
+    }
+
+    async render({ rawCss, rawFilepath }) {
+        return await postcss([
+            postCssImport,
+            autoprefixer,
+            tailwindcss,
+            cssnano,
+
+        ])
+            .process(rawCss, { from: rawFilepath })
+            .then((result) => result.css);
+
     };
-  }
-
-  async render({ rawCss, rawFilepath }) {
-    return await postcss([
-      require('postcss-import'),
-      require('autoprefixer'),
-      require('tailwindcss'),
-      require('cssnano')
-    ])
-      .process(rawCss, { from: rawFilepath })
-      .then((result) => result.css);
-  }
-};
+}

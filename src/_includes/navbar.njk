@@ -1,56 +1,102 @@
-<nav class="flex flex-col xl:flex-row w-full justify-between items-center px-4 xl:px-6 py-1 bg-white shadow xl:shadow-none
-    fixed">
+<nav
+  class="
+    flex flex-col xl:flex-row w-full justify-between items-center px-4 xl:px-6 py-1 bg-white shadow xl:shadow-none
+    fixed
+  "
+>
   <div class="w-full xl:w-auto self-start xl:self-center flex flex-row xl:flex-none flex-no-wrap justify-between items-center">
     <a href="{{ env.baseUrl }}" class="no-underline">
-      <img src="{{ env.baseUrl }}img/adaconf-logo.png" alt="ADAConf Logo" class="h-12 py-1"></a>
-      <button
-        id="menuBtn"
-        class="hamburger block xl:hidden focus:outline-none"
-        type="button"
-        onclick="navToggle();"
-        aria-label="Show Menu">
-        <span class="hamburger__top-bun"></span>
-        <span class="hamburger__bottom-bun"></span>
-      </button>
-    </div>
-    <div
-      id="menu"
-      class="w-full xl:w-auto self-end xl:self-center hidden xl:flex flex-col xl:flex-row items-center h-full py-1 pb-4 xl:py-0
-        xl:pb-0">
-      <a onclick="navOff();" class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:pr-4 py-2 xl:py-1" href="{% if isFront %}#about{% else %}{{ env.baseUrl }}#about{% endif %}">About</a>
-      {# <a onclick="navOff();" class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:px-4 py-2 xl:py-1"
+      <img
+        src="{{ env.baseUrl }}img/adaconf-logo.png"
+        alt="ADAConf Logo"
+        class="h-12 py-1"
+      ></a>
+    <button
+      id="menuBtn"
+      class="hamburger block xl:hidden focus:outline-none"
+      type="button"
+      onclick="navToggle()"
+      aria-label="Show Menu"
+    >
+      <span class="hamburger__top-bun"></span>
+      <span class="hamburger__bottom-bun"></span>
+    </button>
+  </div>
+  <div
+    id="menu"
+    class="
+      w-full xl:w-auto self-end xl:self-center hidden xl:flex flex-col xl:flex-row items-center h-full py-1 pb-4 xl:py-0
+      xl:pb-0
+    "
+  >
+    <a
+      onclick="navOff()"
+      class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:pr-4 py-2 xl:py-1"
+      href="{% if isFront %}#about{% else %}{{ env.baseUrl }}#about{% endif %}"
+    >About</a>
+    {# <a onclick="navOff();" class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:px-4 py-2 xl:py-1"
                   href="{% if isFront %}{% else %}{{ env.baseUrl }}{% endif %}#speakers">Speakers</a>
       <a onclick="navOff();" class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:px-4 py-2 xl:py-1"
                   href="{% if isFront %}{% else %}{{ env.baseUrl }}{% endif %}#workshops">Workshops</a>
       <a onclick="navOff();" class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:px-4 py-2 xl:py-1"
                   href="{% if isFront %}{% else %}{{ env.baseUrl }}{% endif %}#agenda">Agenda</a>  #}
-      <a onclick="navOff();" class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:px-4 py-2 xl:py-1" href="{% if isFront %}#topics{% else %}{{ env.baseUrl }}#topics{% endif %}">Topics</a>
-      <a onclick="navOff();" class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:px-4 py-2 xl:py-1"
-                  href="/sponsors">Sponsoring</a>
-      {# <a onclick="navOff();" class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:px-4 py-2 xl:py-1" href="{% if isFront %}#sponsors{% else %}{{ env.baseUrl }}#sponsors{% endif %}">Sponsors</a> #}
-      {% if site.cfpActive %}
+    <a
+      onclick="navOff()"
+      class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:px-4 py-2 xl:py-1"
+      href="{% if isFront %}#topics{% else %}{{ env.baseUrl }}#topics{% endif %}"
+    >Topics</a>
+    <a
+      onclick="navOff()"
+      class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:px-4 py-2 xl:py-1"
+      href="/sponsors"
+    >Sponsoring</a>
+    {# <a onclick="navOff();" class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:px-4 py-2 xl:py-1" href="{% if isFront %}#sponsors{% else %}{{ env.baseUrl }}#sponsors{% endif %}">Sponsors</a> #}
+    {% if site.cfpUrl %}
       <a
-        onclick="navOff();"
-        class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:px-4 py-2
-          xl:py-1"
+        onclick="navOff()"
+        class="
+          text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:px-4 py-2
+          xl:py-1
+        "
         target="_blank"
-        href="https://sessionize.com/analysis-design-architecture-2025">Call for Speakers</a>
-      {% endif %}
+        href="{{ site.cfpUrl }}"
+      >Call for Speakers</a>
+    {% endif %}
+    <a
+      onclick="navOff()"
+      class="
+        text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:px-4 py-2
+        xl:py-1
+      "
+      href="https://2025.adaconf.org"
+    >2025</a>
+    <span
+      id="follow"
+      class="
+        hidden xl:inline-block text-gray-800 font-bold hover:text-purple-600 text-lg xl:w-auto xl:px-4 xl:py-1
+        cursor-pointer
+      "
+    >
+      Follow</span>
+    {% for item in site.social %}
       <a
-        onclick="navOff();"
-        class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:w-auto xl:px-4 py-2
-          xl:py-1"
-        href="https://2025.adaconf.org">2025</a>
-      <span
-        id="follow"
-        class="hidden xl:inline-block text-gray-800 font-bold hover:text-purple-600 text-lg xl:w-auto xl:px-4 xl:py-1
-          cursor-pointer">
-        Follow</span>
-      {% for item in site.social %}
-        <a onclick="navOff();" href="{{ item.url }}" class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:hidden py-2" {% if "https://" in item.url %} target="_blank" {% endif %} rel="noopener">{{ item.title }}</a>
-      {% endfor %}
-      {% if site.tickets %}
-        <a onclick="navOff();" class="text-gray-800 border border-indigo-800 text-lg bg-gray-100 rounded-full w-auto no-underline text-center xl:text-left hover:border-purple-600 hover:text-purple-600 hover:bg-white hover:shadow-md px-6 py-1 my-2 xl:my-0 xl:ml-4" data-goatcounter-click="trybooking.com" data-goatcounter-referrer="Nav" href="{{ site.tickets.url }}">{{ site.tickets.label }}</a>
-      {% endif %}
-    </div>
-  </nav>
+        onclick="navOff()"
+        href="{{ item.url }}"
+        class="text-gray-800 font-bold hover:text-purple-600 text-lg text-center w-full no-underline xl:hidden py-2"
+        {% if "https://" in item.url %}
+          target="_blank"
+        {% endif %}
+        rel="noopener"
+      >{{ item.title }}</a>
+    {% endfor %}
+    {% if site.tickets %}
+      <a
+        onclick="navOff()"
+        class="text-gray-800 border border-indigo-800 text-lg bg-gray-100 rounded-full w-auto no-underline text-center xl:text-left hover:border-purple-600 hover:text-purple-600 hover:bg-white hover:shadow-md px-6 py-1 my-2 xl:my-0 xl:ml-4"
+        data-goatcounter-click="trybooking.com"
+        data-goatcounter-referrer="Nav"
+        href="{{ site.tickets.url }}"
+      >{{ site.tickets.label }}</a>
+    {% endif %}
+  </div>
+</nav>

@@ -13,11 +13,12 @@ ADAConf's mission is to support the building of software that is more valuable f
 
 Key dates:
 
-* CfS open: TBD
-* CfS close: TBD
-* CfS process closed and participants informed: TBD
-* Public schedule published: TBD
-* Conference day: 19th November 2025
+* CfS open: 14th March, 2026
+* CfS close: 30th June, 2026
+* CfS process closed and participants informed: 31st July, 2026
+* Public schedule published: 17th August, 2026
+* Conference day: 19th November 2026
+* Unconference day: 20th November, 2026
 
 <!-- We will start reaching out to speakers prior to the CfS close, but will ensure we respond to all submissions by the 15th of August -->
 

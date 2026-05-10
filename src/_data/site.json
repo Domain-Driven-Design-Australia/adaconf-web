@@ -8,9 +8,9 @@
   },
   "cfpUrl": "https://sessionize.com/analysis-design-architecture-2026",
   "language": "en",
-  "_tickets": {
-    "label": "Conference Tickets",
-    "url": "https://www.trybooking.com/events/1356285/sessions/5419648/sections/2586288/tickets"
+  "tickets": {
+    "label": "Tickets",
+    "url": "https://www.trybooking.com/events/1557079/sessions/6319215/sections/2998308/tickets"
   },
   "_workshopTickets": {
     "label": "Pre-conference Workshop Tickets",

@@ -16,7 +16,7 @@ Key dates:
 * CfS open: 14th March, 2026
 * CfS close: 30th June, 2026
 * CfS process closed and participants informed: 31st July, 2026
-* Public schedule published: 17th August, 2026
+* Public schedule published: 31st August, 2026
 * Conference day: 19th November 2026
 * Unconference day: 20th November, 2026
 

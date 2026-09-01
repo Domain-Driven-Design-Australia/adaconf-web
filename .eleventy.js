@@ -1,7 +1,10 @@
 import { minify } from "html-minifier";
-import markdownIt from 'markdown-it';
+import markdownIt from "markdown-it";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import fetch from "@11ty/eleventy-fetch";
+import { join } from "path";
+import { mkdir, writeFile } from "fs/promises";
+import site from "./src/_data/site.json" with { type: "json" };
 
 const isPages = process.env.ELEVENTY_ENV === 'pages'
 const outDir = isPages ? 'docs' : 'public'
@@ -38,34 +41,37 @@ export default function (eleventyConfig) {
   });
 
   // // Speaker List
-  // const filters = eleventyConfig.nunjucksFilters;
-  // const sessionizeImageUrl = '/img/speakers/sessionize';
-  // const sessionizeImagePath = join(outDir, sessionizeImageUrl);
-  // mkdir(sessionizeImagePath, { recursive: true });
-  // eleventyConfig.ignores.delete(sessionizeImagePath);
-  // eleventyConfig.watchIgnores.add(sessionizeImagePath);
-  // eleventyConfig.addCollection('sessionizeSpeakers', async () => {
-  //   const speakers = await fetch('https://sessionize.com/api/v2/656ttfhs/view/Speakers', {
-  //     duration: "1d",
-  //     type: "json",
-  //   });
-  //   for (const speaker of speakers) {
-  //     if (speaker.profilePicture) {
-  //       const image = await fetch(speaker.profilePicture, {
-  //         duration: "1d",
-  //         type: "buffer"
-  //       });
-  //       const imageFileName = `${filters.slugify(speaker.fullName)}.png`;
+  if (site.sessionize_apis.speakers) {
+    const slugify = eleventyConfig.getFilter("slugify");
+    const sessionizeImageUrl = '/img/speakers/sessionize';
+    const sessionizeImagePath = join(outDir, sessionizeImageUrl);
+    mkdir(sessionizeImagePath, { recursive: true });
+    eleventyConfig.ignores.delete(sessionizeImagePath);
+    eleventyConfig.watchIgnores.add(sessionizeImagePath);
+    eleventyConfig.addCollection('sessionizeSpeakers', async () => {
+      const speakers = await fetch(`https://sessionize.com/api/v2/${site.sessionize_apis.speakers}/view/Speakers`, {
+        duration: "1d",
+        type: "json",
+      });
+      for (const speaker of speakers) {
+        if (speaker.profilePicture) {
+          const image = await fetch(speaker.profilePicture, {
+            duration: "1d",
+            type: "buffer"
+          });
+          const imageFileName = `${slugify(speaker.fullName)}.png`;
 
-  //       const relativeImagePath = join(sessionizeImagePath, imageFileName);
-  //       await writeFile(relativeImagePath, image);
+          const relativeImagePath = join(sessionizeImagePath, imageFileName);
+          await writeFile(relativeImagePath, image);
 
-  //       speaker.relativeProfilePicture = join(sessionizeImageUrl, imageFileName);
-  //       console.log(`Writing ${imageFileName} to ${relativeImagePath} so it can be served from ${speaker.relativeProfilePicture}`);
-  //     }
-  //   }
-  //   return speakers;
-  // });
+          speaker.relativeProfilePicture = join(sessionizeImageUrl, imageFileName);
+          console.log(`Writing ${imageFileName} to ${relativeImagePath} so it can be served from ${speaker.relativeProfilePicture}`);
+        }
+      }
+      return speakers;
+    });
+  }
+
 
   // // Workshops
   // eleventyConfig.addCollection('sessionizeWorkshops', async () => {
@@ -87,7 +93,7 @@ export default function (eleventyConfig) {
 
   // Agenda
   eleventyConfig.addCollection('sessionizeAgenda', async () => {
-    return await fetch('https://sessionize.com/api/v2/z14jafzm/view/GridSmart', {
+    return await fetch(`https://sessionize.com/api/v2/${site.sessionize_apis.agenda}/view/GridSmart`, {
       duration: "1d",
       type: "string",
     });

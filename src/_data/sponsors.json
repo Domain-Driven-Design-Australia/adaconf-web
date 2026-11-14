@@ -1,1 +1,35 @@
-[]
+[
+    {
+        "level": "Gold",
+        "color": "#FFD700",
+        "numPerRow": 2,
+        "height": "100px",
+        "textSize": "4xl",
+        "sponsors": [
+            {
+                "name": "Chris Simon - Technology Coaching & Advisory",
+                "logoUrl": "Full logo (dark grey).png",
+                "url": "https://chrissimon.au"
+            }
+        ]
+    },
+    {
+        "level": "Silver",
+        "color": "#C0C0C0",
+        "numPerRow": 2,
+        "height": "60px",
+        "textSize": "4xl",
+        "sponsors": [
+            {
+                "name": "REA",
+                "logoUrl": "reagroup_logo_h_rgb.svg",
+                "url": "http://realestate.com.au/"
+            },
+            {
+                "name": "Verdaniq",
+                "logoUrl": "verdaniq.png",
+                "url": "https://verdaniq.com"
+            }
+        ]
+    }
+]

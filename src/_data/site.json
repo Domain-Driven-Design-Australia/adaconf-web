@@ -16,7 +16,7 @@
     "label": "Pre-conference Workshop Tickets",
     "url": "https://www.trybooking.com/events/1439100/sessions/5772609/sections"
   },
-  "_appUrl": "https://adaconf-2025.sessionize.com/",
+  "appUrl": "https://adaconf-2026.sessionize.com/",
   "sessionize_apis": {
     "speakers": "evebpmm2",
     "agenda": "sf7q2ppm"
